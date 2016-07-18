@@ -37,7 +37,7 @@ class PostsController < ApplicationController
       flash[:notice] = 'Post updated successfully'
       redirect_to post_path(@post)
     else
-      flash[:notice] = 'You must be the owner to update a post description'
+      flash[:alert] = 'You must be the owner to update a post description'
       redirect_to post_path(@post)
     end
   end
@@ -50,7 +50,7 @@ class PostsController < ApplicationController
       flash[:notice] = 'Post deleted successfully'
       redirect_to posts_path
     else
-      flash[:notice] = 'You must be the owner to delete a post'
+      flash[:alert] = 'You must be the owner to delete a post'
       redirect_to post_path(@post)
     end
   end

@@ -1,9 +1,18 @@
 <% if @posts.any? %>
-  <% @posts.each do |post| %>
 
-      <h2><%= link_to (post.title), post_path(post) %></h2>
-      <%= link_to (image_tag post.image.url(:medium)), post_path(post) %>
-  <% end %>
+  <div class="card-columns">
+    <% @posts.each do |post| %>
+      <div class="card card-block card-inverse center-block", style="background-color: #333; border-color: #333;">
+        <%= link_to (image_tag post.image.url(:medium)), post_path(post), { class: "card-img-top center-block", alt: "Card image cap" } %>
+        <div class="card-block">
+          <h4 class="card-title"><%= link_to (post.title), post_path(post) %></h4>
+          <p class="card-text"><%= post.description %></p>
+        </div>
+        <%= link_to (image_tag post.image.url(:medium)), post_path(post) %>
+      </div>
+    <% end %>
+  </div>
+
 <% else %>
   <h1>No posts yet</h1>
 <% end %>

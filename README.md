@@ -5,6 +5,7 @@
 *   Database creation: Run `bin/rake db:create`
 *   Test suite: Run `rspec`
 *   This is a Rails exercise.
+*   <https://insta-rails-practice.herokuapp.com/>
 
 ## User Stories
 

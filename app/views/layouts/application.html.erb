@@ -44,14 +44,14 @@
       </div>
     </nav>
 
-    <%= button_to "Add a Picture", { action: "new" }, { method: "get", class: "btn btn-primary btn-lg btn-block" } %>
-    <br/>
+    <%= button_to "Add a Picture", { action: "new" }, { method: "get", class: "btn btn-primary btn-lg center-block" } %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= alert %>
+    <%= notice %>
     <%= yield %>
 
     <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script><!-- Tether for Bootstrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
   </body>

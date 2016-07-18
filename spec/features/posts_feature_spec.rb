@@ -14,7 +14,7 @@ feature 'posts' do
       sign_up
       create_post
       expect(page).to have_content 'PIC'
-      expect(page).to_not have_content 'Description_text'
+      expect(page).to have_content 'Description_text'
       expect(page).to have_content 'Post created successfully'
       expect(current_path).to eq posts_path
     end
