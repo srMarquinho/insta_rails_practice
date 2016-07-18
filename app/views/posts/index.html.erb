@@ -8,7 +8,6 @@
           <h4 class="card-title"><%= link_to (post.title), post_path(post) %></h4>
           <p class="card-text"><%= post.description %></p>
         </div>
-        <%= link_to (image_tag post.image.url(:medium)), post_path(post) %>
       </div>
     <% end %>
   </div>
